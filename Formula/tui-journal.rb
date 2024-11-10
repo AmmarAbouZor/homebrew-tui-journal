@@ -1,4 +1,4 @@
-class Tjournal < Formula
+class TuiJournal < Formula
     desc "Your journal app if you live in a terminal"
     homepage "https://crates.io/crates/tui-journal"
   
