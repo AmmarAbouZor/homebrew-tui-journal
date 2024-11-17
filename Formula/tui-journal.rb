@@ -1,26 +1,27 @@
 class TuiJournal < Formula
-    desc "Your journal app if you live in a terminal"
-    homepage "https://crates.io/crates/tui-journal"
-  
-    on_macos do
-      on_arm do
-        url "https://github.com/AmmarAbouZor/tui-journal/releases/download/v0.12.1/tjournal-mac-arm64.tar.gz"
-        sha256 "bd518d851103d12db23dfbc5a9d4338a097f2bcf7de8e0c79cb8b948b456f8b0"
-      end
-      on_intel do
-        url "https://github.com/AmmarAbouZor/tui-journal/releases/download/v0.12.1/tjournal-mac-x86_64.tar.gz"
-        sha256 "3054291204bf44113038d60fb3210d45844444ee68b3c1f63fd04ef217a88cd6"
-      end
-    end
+  desc "Your journal app if you live in a terminal"
+  homepage "https://github.com/AmmarAbouZor/tui-journal"
+  url "https://github.com/AmmarAbouZor/tui-journal/archive/refs/tags/v0.12.0.tar.gz"
+  sha256 "646b83fbd638cfabb7c23d3a76cf68ffa97dae26571d40a40637e77d6bdc2984"
+  license "MIT"
 
-    on_linux do
-      on_intel do
-        url "https://github.com/AmmarAbouZor/tui-journal/releases/download/v0.12.1/tjournal-linux-gnu.tar.gz"
-        sha256 "fb752861a39b66b44d9cb977cb840012a5e307ffde788b6f458d579bcf5b42d5"
-      end
-    end
-    
-    def install
-      bin.install "tjournal"
-    end
+
+  bottle do
+    sha256 cellar: :any,                 arm64_sequoia:  "c5d995cb59c58bb5d44c61bb2d5b88073164561de392e929422c352ef2b2ccef"
+    sha256 cellar: :any,                 arm64_sonoma:   "d6f7ec14145cf4230fb6370f48f0daaa1c67cd03a6cda7b22979080714a44b7a"
+    sha256 cellar: :any,                 arm64_ventura:  "98bffe2fea54b264392059fff7a0091c7cedc384fdff15cad427eed0390bb5ff"
+    sha256 cellar: :any,                 arm64_monterey: "c882077be795e50d065d975928d3ef66636ab05fe1d884968691841cf8919fd2"
+    sha256 cellar: :any,                 sonoma:         "d8d54259afc4edb877d269603a16dd4097a95926c92c7008783770006c7617b5"
+    sha256 cellar: :any,                 ventura:        "afff6b29de302997785496f4238a3c501e894e6da643228d2dcbbf715285f14e"
+    sha256 cellar: :any,                 monterey:       "eec269d68c591c21ad9c4beee25b00e051e3be34f97b94cfa2965b95848315e1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "350a9f635cea158f6d0c49b6859dbb91c65e9b4a29c224e34469362e758b9ac5"
   end
+
+  depends_on "rust" => :build
+  uses_from_macos "zlib"
+
+
+  def install
+    system "cargo", "install"
+  end
+end
