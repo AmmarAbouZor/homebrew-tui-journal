@@ -7,10 +7,10 @@ class Tjournal < Formula
         url "https://github.com/AmmarAbouZor/tui-journal/releases/download/v0.12.0/tjournal-mac-arm64.tar.gz"
         sha256 "bd518d851103d12db23dfbc5a9d4338a097f2bcf7de8e0c79cb8b948b456f8b0"
       end
-      on_intel do
-        url "https://github.com/AmmarAbouZor/tui-journal/releases/download/v0.12.0/tjournal-mac-x86_64.tar.gz"
-        sha256 "3054291204bf44113038d60fb3210d45844444ee68b3c1f63fd04ef217a88cd6"
-      end
+      # on_intel do
+      #   url "https://github.com/AmmarAbouZor/tui-journal/releases/download/v0.12.0/tjournal-mac-x86_64.tar.gz"
+      #   sha256 "3054291204bf44113038d60fb3210d45844444ee68b3c1f63fd04ef217a88cd6"
+      # end
     end
 
     on_linux do
