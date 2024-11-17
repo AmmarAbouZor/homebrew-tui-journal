@@ -5,6 +5,5 @@ This repo contains the homebrew formula for [tui-journal](https://github.com/Amm
 To install `tui-journal` with `homebrew`:
 
 ```shell
-brew tap AmmarAbouZor/homebrew-tui-journal
-brew install tui-journal
+brew tap AmmarAbouZor/homebrew-tui-journal/tui-journal
 ```
