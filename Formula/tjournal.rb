@@ -15,7 +15,7 @@ class Tjournal < Formula
 
     on_linux do
       on_intel do
-        url "https://github.com/AmmarAbouZor/tui-journal/releases/download/v0.12.0/tjournal-linux-gnu.tar.gz"
+        url "https://github.com/AmmarAbouZor/tui-journal/releases/download/v0.12.1/tjournal-linux-gnu.tar.gz"
         sha256 "fb752861a39b66b44d9cb977cb840012a5e307ffde788b6f458d579bcf5b42d5"
       end
     end
