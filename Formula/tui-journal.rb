@@ -1,8 +1,8 @@
 class TuiJournal < Formula
   desc "Your journal app if you live in a terminal"
   homepage "https://github.com/AmmarAbouZor/tui-journal"
-  url "https://github.com/AmmarAbouZor/tui-journal/archive/refs/tags/v0.17.0.tar.gz"
-  sha256 "17359186c0b235065ce6fe8aed0d20a0efc462e46e759cfd9c1906bed89b0dec"
+  url "https://github.com/AmmarAbouZor/tui-journal/archive/refs/tags/v0.18.0.tar.gz"
+  sha256 "212cfc1dfa83167f5ff4819c11bb2c17e8f5c2a9b2111b9dfd2d1d071c987fbd"
   license "MIT"
 
   depends_on "rust" => :build
